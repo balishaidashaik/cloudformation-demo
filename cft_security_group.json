@@ -8,7 +8,7 @@
             "Properties": {
                 "GroupName": "CFT-Test-SG",
                 "GroupDescription": "security group for ",
-                "VpcId": "vpc-dfa0a9b6",
+                "VpcId": "vpc-00688e49234bd413b",
                 "SecurityGroupIngress": [
                     {"IpProtocol": "tcp","FromPort": "80","ToPort": "80","CidrIp":"10.0.0.0/16"},
                     {"IpProtocol": "tcp","FromPort": "22","ToPort": "22","CidrIp":"10.0.1.0/24"},
