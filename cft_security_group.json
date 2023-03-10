@@ -1,0 +1,23 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "CloudFormation Template For Setting up the Services required for SellerService",
+    
+    "Resources": {
+        "SecurityGroup": {
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupName": "CFT-Test-SG",
+                "GroupDescription": "security group for ",
+                "VpcId": "vpc-dfa0a9b6",
+                "SecurityGroupIngress": [
+                    {"IpProtocol": "tcp","FromPort": "80","ToPort": "80","CidrIp":"10.0.0.0/16"},
+                    {"IpProtocol": "tcp","FromPort": "22","ToPort": "22","CidrIp":"10.0.1.0/24"},
+                    {"IpProtocol": "tcp","FromPort": "443","ToPort": "443","CidrIp":"10.0.0.0/16"}
+                ],
+                "SecurityGroupEgress": [
+                    {"IpProtocol": "-1","CidrIp": "0.0.0.0/0"}
+                ]
+            }
+        }
+    }
+}
